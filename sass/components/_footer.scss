@@ -1,0 +1,128 @@
+.footer__list_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 25px;
+
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        padding: 0px;
+    }
+
+    li:not(:last-child) {
+        margin-bottom: 25px;
+
+        @media (min-width: 1024px) {
+            margin-bottom: 0px;
+        }
+    }
+
+    li:first-child{
+        @media (min-width: 1024px){
+            margin-right: 32px;
+        }
+    }
+}
+
+.footer__item_logo_cyberpunk {
+    width: 200px;
+    height: 50px;
+
+    use {
+        width: 200px;
+        height: 50px;
+    }
+
+    @media (min-width: 1024px) {
+        width: 296px;
+        height: 74px;
+
+        use {
+            width: 296px;
+            height: 74px;
+        }
+    }
+}
+
+.footer__item_logo_cd_project_red {
+    width: 116px;
+    height: 50px;
+
+    use {
+        width: 116px;
+        height: 50px;
+    }
+
+    @media (min-width: 1024px) {
+        width: 172px;
+        height: 74px;
+
+        use {
+            width: 172px;
+            height: 74px;
+        }
+    }
+}
+
+.footer__list_conditions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: $gray--color;
+
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        padding: 0px;
+        background-color: $white-color;
+    }
+
+    li:not(:last-child) {
+        margin-bottom: 15px;
+
+        @media (min-width: 1024px) {
+            margin-bottom: 0px;
+        }
+    }
+
+    li:first-child{
+        @media (min-width: 1024px){
+            margin-right: 100px;
+        }
+    }
+}
+
+.footer__link {
+    font-size: 16px;
+    color: inherit;
+
+    @media (min-width:1024px) {
+        font-size: 18px;
+    }
+}
+
+.footer__description {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    text-align: center;
+    font-size: 12px;
+    background-color: $black-color;
+    color: $white-color;
+}
+
+@media (min-width: 1024px) {
+    .footer_tablet_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 36px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .footer_tablet_container {
+        padding: 13px 320px;
+    }
+}

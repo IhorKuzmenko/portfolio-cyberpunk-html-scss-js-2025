@@ -1,0 +1,176 @@
+.kit {
+    background-color: $black-color;
+    padding-bottom: 70px;
+
+    @media (min-width: 1024px) {
+        padding-bottom: 0px;
+    }
+}
+
+.kit__header_background {
+    margin: 0 auto;
+    min-width: 320px;
+    height: 198px;
+    background-image: url("../images/discs_mobile.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: 1024px) {
+        min-width: 332px;
+        height: 717px;
+        background-image: url("../images/discs_tablet.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    @media (min-width: 1920px) {
+        min-width: 944px;
+        height: 680px;
+        background-image: url("../images/discs_desktop.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.kit__title {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 30px;
+    color: $white-color;
+
+    @media (min-width: 1024px) {
+        margin-top: 0px;
+        font-size: 62px;
+    }
+}
+
+.kit__description {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 20px;
+    color: $turquoise-color;
+
+    @media (min-width: 1024px) {
+        font-size: 24px;
+    }
+
+    &--margin {
+        margin-top: 40px;
+        margin-bottom: 25px;
+    }
+}
+
+.kit__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+    @media (min-width: 1024px) {
+        margin-top: 15px;
+    }
+
+    li:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+}
+
+.kit__item {
+    display: flex;
+    align-items: center;
+}
+
+.kit__icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 18px;
+
+    @media (min-width: 1024px) {
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+    }
+}
+
+.kit__item_description {
+    width: 254px;
+    font-size: 16px;
+    color: $white-color;
+
+    @media (min-width: 1024px) {
+        font-size: 18px;
+    }
+}
+
+.kit__icon_pc {
+    width: 57px;
+    height: 33px;
+
+    use {
+        width: 57px;
+        height: 33px;
+    }
+}
+
+.kit__icon_xbox {
+    width: 178px;
+    height: 35px;
+
+    use {
+        width: 178px;
+        height: 35px;
+    }
+}
+
+.kit__icon_stadia {
+    width: 58px;
+    height: 50px;
+
+    use {
+        width: 58px;
+        height: 50px;
+    }
+}
+
+.kit__icon_ps4 {
+    width: 168px;
+    height: 35px;
+
+    use {
+        width: 168px;
+        height: 35px;
+    }
+}
+
+.kit__list_platform {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+
+    li:first-child {
+        @media (min-width: 1024px) {
+            margin-right: 80px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        justify-content: start;
+    }
+
+    &--margin {
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width:1024px) {
+    .kit__tablet_container {
+        display: flex;
+
+        div:last-child {
+            padding: 70px 36px 70px 32px;
+        }
+    }
+}
