@@ -1,13 +1,13 @@
 const backgrounds = {
-    desktop: ['url("../images/image_slide_1_desktop.jpg")',
-        'url("../images/image_slide_2_desktop.jpg")',
-        'url("../images/image_slide_3_desktop.jpg")'],
-    tablet: ['url("../images/image_slide_1_tablet.jpg")',
-        'url("../images/image_slide_2_tablet.jpg")',
-        'url("../images/image_slide_3_tablet.jpg")'],
-    mobile: ['url("../images/image_slide_1_mobile.jpg")',
-        'url("../images/image_slide_2_mobile.jpg")',
-        'url("../images/image_slide_3_mobile.jpg")'],
+    desktop: ['url("./images/image_slide_1_desktop.jpg")',
+        'url("./images/image_slide_2_desktop.jpg")',
+        'url("./images/image_slide_3_desktop.jpg")'],
+    tablet: ['url("./images/image_slide_1_tablet.jpg")',
+        'url("./images/image_slide_2_tablet.jpg")',
+        'url("./images/image_slide_3_tablet.jpg")'],
+    mobile: ['url("./images/image_slide_1_mobile.jpg")',
+        'url("./images/image_slide_2_mobile.jpg")',
+        'url("./images/image_slide_3_mobile.jpg")'],
 };
 
 function getDeviceType() {
