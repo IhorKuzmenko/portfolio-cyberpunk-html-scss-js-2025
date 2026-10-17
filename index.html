@@ -3,12 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Explore Night City in Cyberpunk 2077. Discover the game, platforms, and immersive gaming experience in this fan-made portfolio project."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cyberpunk 2077" />
+    <meta
+      property="og:description"
+      content="Enter the world of Cyberpunk 2077. A fan-made responsive landing page built with HTML, SCSS, and JavaScript."
+    />
+
+    <title>Cyberpunk 2077 | Night City</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
@@ -16,89 +33,147 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <link rel="stylesheet" href="./sass/main.css" />
-    <title>Cyberpunk 2077</title>
   </head>
 
   <body>
-    <header>
-      <section class="header">
+    <header id="top">
+      <section class="header" aria-label="Cyberpunk 2077 introduction">
         <div class="container header__container">
-          <a class="header__logo">
-            <svg class="header__svg">
+          <a
+            class="header__logo"
+            href="#top"
+            aria-label="Cyberpunk 2077 — back to top"
+          >
+            <svg class="header__svg" aria-hidden="true" focusable="false">
               <use
                 class="header__icon"
                 href="./images/sprite.svg#icon-logo_cyberpunk"
               ></use>
             </svg>
           </a>
-          <ul class="header__list">
-            <li>
-              <a href="#">
-                <svg class="header__list_svg">
-                  <use
-                    class="header__list_icon"
-                    href="./images/sprite.svg#icon-youtube"
-                  ></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="header__list_svg">
-                  <use
-                    class="header__list_icon"
-                    href="./images/sprite.svg#icon-facebook"
-                  ></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="header__list_svg">
-                  <use
-                    class="header__list_icon"
-                    href="./images/sprite.svg#icon-twitter"
-                  ></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="header__list_svg">
-                  <use
-                    class="header__list_icon"
-                    href="./images/sprite.svg#icon-twitch"
-                  ></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="header__list_svg">
-                  <use
-                    class="header__list_icon"
-                    href="./images/sprite.svg#icon-instagram"
-                  ></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+
+          <nav aria-label="Social media">
+            <ul class="header__list">
+              <li>
+                <a
+                  href="https://www.youtube.com/@CyberpunkGame"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Cyberpunk 2077 on YouTube"
+                >
+                  <svg
+                    class="header__list_svg"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <use
+                      class="header__list_icon"
+                      href="./images/sprite.svg#icon-youtube"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.facebook.com/CyberpunkGame"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Cyberpunk 2077 on Facebook"
+                >
+                  <svg
+                    class="header__list_svg"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <use
+                      class="header__list_icon"
+                      href="./images/sprite.svg#icon-facebook"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://x.com/CyberpunkGame"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Cyberpunk 2077 on X"
+                >
+                  <svg
+                    class="header__list_svg"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <use
+                      class="header__list_icon"
+                      href="./images/sprite.svg#icon-twitter"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.twitch.tv/cdprojektred"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="CD PROJEKT RED on Twitch"
+                >
+                  <svg
+                    class="header__list_svg"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <use
+                      class="header__list_icon"
+                      href="./images/sprite.svg#icon-twitch"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.instagram.com/cyberpunkgame/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Cyberpunk 2077 on Instagram"
+                >
+                  <svg
+                    class="header__list_svg"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <use
+                      class="header__list_icon"
+                      href="./images/sprite.svg#icon-instagram"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
           <div class="header__information">
             <p class="header__description">Available on all platforms</p>
-            <button class="header__button" type="button">Learn more</button>
+
+            <a class="header__button" href="#kit"> Learn more </a>
           </div>
         </div>
       </section>
     </header>
+
     <main>
-      <section class="about">
+      <section class="about" id="about">
         <div class="container about__container">
           <h1 class="about__title">Night City will change you forever!</h1>
+
           <p class="about__description">
-            <span class="about__description about__description--color"
-              >Cyberpunk 2077</span
-            >
+            <span class="about__description--color"> Cyberpunk 2077 </span>
             is an adventure role-playing game set in the megalopolis of Night
             City, where power, luxury, and body modifications are valued above
             all else. You play as V, a mercenary in search of a one-of-a-kind
@@ -108,205 +183,283 @@
           </p>
         </div>
       </section>
-      <section class="images">
+
+      <section class="images" aria-label="Night City gallery">
         <div class="images__mobile">
           <img
             src="./images/image_hero_1_mobile.jpg"
-            alt="city ​​in neon lights"
+            alt="Night City illuminated by neon lights"
             width="320"
             height="196"
+            loading="lazy"
+            decoding="async"
           />
+
           <img
             src="./images/image_hero_2_mobile.jpg"
-            alt="city ​​in neon lights, man on a motorcycle"
+            alt="A motorcycle rider in the neon-lit Night City"
             width="320"
             height="196"
+            loading="lazy"
+            decoding="async"
           />
+
           <img
             src="./images/image_hero_3_mobile.jpg"
-            alt="city ​​in neon lights"
+            alt="Futuristic buildings and streets of Night City"
             width="320"
             height="424"
+            loading="lazy"
+            decoding="async"
           />
         </div>
+
         <div class="images__tablet">
           <div class="images__tablet_container">
             <img
               class="img_1"
               src="./images/image_hero_1_tablet.jpg"
-              alt="city ​​in neon lights"
+              alt="Night City illuminated by neon lights"
               width="460"
               height="196"
+              loading="lazy"
+              decoding="async"
             />
+
             <img
               class="img_2"
               src="./images/image_hero_2_tablet.jpg"
-              alt="city ​​in neon lights, man on a motorcycle"
+              alt="A motorcycle rider in the neon-lit Night City"
               width="460"
               height="196"
+              loading="lazy"
+              decoding="async"
             />
           </div>
+
           <div>
             <img
               class="img_3"
               src="./images/image_hero_3_tablet.jpg"
-              alt="city ​​in neon lights"
+              alt="Futuristic buildings and streets of Night City"
               width="952"
               height="424"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
       </section>
-      <section class="drawing">
-        <div class="drawing__header_background"></div>
+
+      <section class="drawing" id="drawing" aria-labelledby="drawing-title">
+        <div class="drawing__header_background" aria-hidden="true"></div>
+
         <div class="container">
-          <div>
-            <svg class="drawing__label_sale">
-              <use href="./images/sprite.svg#icon-sale"></use>
-            </svg>
-            <div class="drawing__desktop_container">
-              <div class="drawing__inner">
-                <svg class="drawing__label_sale_desktop">
-                  <use href="./images/sprite.svg#icon-sale"></use>
-                </svg>
-                <h2 class="drawing__desktop_title">Play and win!</h2>
-              </div>
-              <p class="drawing__desktop_description">
-                Play
-                <span
-                  class="drawing__desktop_description drawing__desktop_description--color"
-                  >Cyberpunk 2077</span
-                >
-                and get a chance to win an
-                <span
-                  class="drawing__desktop_description drawing__desktop_description--color"
-                  >Xbox Series X</span
-                >
-                or
-                <span
-                  class="drawing__desktop_description drawing__desktop_description--color"
-                  >Sony PlayStation 5!</span
-                >
-                Fill out the form below and attach a screenshot of your game
-                purchase. The winners will be announced on February 1st. Good
-                luck!
-              </p>
+          <svg class="drawing__label_sale" aria-hidden="true" focusable="false">
+            <use href="./images/sprite.svg#icon-sale"></use>
+          </svg>
+
+          <div class="drawing__desktop_container">
+            <div class="drawing__inner">
+              <svg
+                class="drawing__label_sale_desktop"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <use href="./images/sprite.svg#icon-sale"></use>
+              </svg>
+
+              <h2 class="drawing__desktop_title" id="drawing-title">
+                Play and win!
+              </h2>
             </div>
-            <div class="drawing__tablet_container">
-              <div class="drawing__flex_container">
-                <div class="drawing__xbox_container">
-                  <img
-                    class="drawing__background_xbox"
-                    srcset="
-                      ./images/xbox_background.png    1x,
-                      ./images/xbox_background@2x.png 2x,
-                      ./images/xbox_background@3x.png 3x
-                    "
-                    src="images/xbox_background.png"
-                    alt="yellow stripes"
-                  />
-                  <img
-                    class="drawing__xbox"
-                    srcset="
-                      ./images/xbox.png    1x,
-                      ./images/xbox@2x.png 2x,
-                      ./images/xbox@3x.png 3x
-                    "
-                    src="./images/xbox.png"
-                    alt="Xbox Series X"
-                  />
-                </div>
-                <div class="drawing__ps_container">
-                  <img
-                    class="drawing__background_ps"
-                    srcset="
-                      images/ps_background.png    1x,
-                      images/ps_background@2x.png 2x,
-                      images/ps_background@3x.png 3x
-                    "
-                    src="images/ps_background.png"
-                    alt="blue stripes"
-                  />
-                  <img
-                    class="drawing_ps"
-                    srcset="
-                      ./images/playstation.png    1x,
-                      ./images/playstation@2x.png 2x,
-                      ./images/playstation@3x.png 3x
-                    "
-                    src="./images/playstation.jpg"
-                    alt="Sony Playstation 5"
-                  />
-                </div>
+
+            <p class="drawing__desktop_description">
+              Play
+              <span class="drawing__desktop_description--color">
+                Cyberpunk 2077
+              </span>
+              and get a chance to win an
+              <span class="drawing__desktop_description--color">
+                Xbox Series X
+              </span>
+              or
+              <span class="drawing__desktop_description--color">
+                Sony PlayStation 5!
+              </span>
+              Fill out the form below and attach a screenshot of your game
+              purchase. This is a demonstration of the original promotional
+              page.
+            </p>
+          </div>
+
+          <div class="drawing__tablet_container">
+            <div class="drawing__flex_container">
+              <div class="drawing__xbox_container">
+                <img
+                  class="drawing__background_xbox"
+                  src="./images/xbox_background.png"
+                  srcset="
+                    ./images/xbox_background.png    1x,
+                    ./images/xbox_background@2x.png 2x,
+                    ./images/xbox_background@3x.png 3x
+                  "
+                  alt=""
+                  width="132"
+                  height="130"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <img
+                  class="drawing__xbox"
+                  src="./images/xbox.png"
+                  srcset="
+                    ./images/xbox.png    1x,
+                    ./images/xbox@2x.png 2x,
+                    ./images/xbox@3x.png 3x
+                  "
+                  alt="Xbox Series X"
+                  width="85"
+                  height="100"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <div>
-                <div class="drawing__title_container">
-                  <h2 class="drawing__title">Play and win!</h2>
-                  <p class="drawing__description">
-                    Play
-                    <span
-                      class="drawing__description drawing__description--color"
-                      >Cyberpunk 2077</span
-                    >
-                    and get a chance to win an
-                    <span
-                      class="drawing__description drawing__description--color"
-                      >Xbox Series X</span
-                    >
-                    or
-                    <span
-                      class="drawing__description drawing__description--color"
-                      >Sony PlayStation 5!</span
-                    >
-                    Fill out the form below and attach a screenshot of your game
-                    purchase. The winners will be announced on February 1st.
-                    Good luck!
-                  </p>
-                </div>
-                <form class="drawing__form">
-                  <input
-                    class="drawing__input"
-                    type="text"
-                    name="name"
-                    placeholder="Name"
-                  />
-                  <input
-                    class="drawing__input"
-                    type="email"
-                    name="email"
-                    placeholder="E-mail"
-                  />
-                  <label class="drawing__label_file" for="file">
-                    <input
-                      class="drawing__input_file"
-                      type="file"
-                      name="file"
-                      accept=".png,.jpg,.pdf"
-                      hidden
-                      id="file"
-                    />
-                    <span class="drawing__span">Attach a screenshot</span>
-                  </label>
-                  <button class="drawing__button" type="button">Send</button>
-                  <label class="drawing__label_checkbox" for="checkbox">
-                    <input
-                      class="drawing__input_checkbox"
-                      type="checkbox"
-                      name="checkbox"
-                      id="checkbox"
-                    />
-                    <span class="drawing__agreement"
-                      >I agree to the processing of personal data</span
-                    >
-                  </label>
-                </form>
+
+              <div class="drawing__ps_container">
+                <img
+                  class="drawing__background_ps"
+                  src="./images/ps_background.png"
+                  srcset="
+                    ./images/ps_background.png    1x,
+                    ./images/ps_background@2x.png 2x,
+                    ./images/ps_background@3x.png 3x
+                  "
+                  alt=""
+                  width="132"
+                  height="130"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <img
+                  class="drawing_ps"
+                  src="./images/playstation.png"
+                  srcset="
+                    ./images/playstation.png    1x,
+                    ./images/playstation@2x.png 2x,
+                    ./images/playstation@3x.png 3x
+                  "
+                  alt="Sony PlayStation 5"
+                  width="85"
+                  height="100"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
+            </div>
+
+            <div>
+              <div class="drawing__title_container">
+                <h2 class="drawing__title">Play and win!</h2>
+
+                <p class="drawing__description">
+                  Play
+                  <span class="drawing__description--color">
+                    Cyberpunk 2077
+                  </span>
+                  and get a chance to win an
+                  <span class="drawing__description--color">
+                    Xbox Series X
+                  </span>
+                  or
+                  <span class="drawing__description--color">
+                    Sony PlayStation 5!
+                  </span>
+                  Fill out the form below and attach a screenshot of your game
+                  purchase. This is a demonstration of the original promotional
+                  page.
+                </p>
+              </div>
+
+              <form class="drawing__form" id="drawing-form">
+                <label class="visually-hidden" for="drawing-name">
+                  Your name
+                </label>
+
+                <label class="visually-hidden" for="drawing-email">
+                  Your email
+                </label>
+
+                <input
+                  class="drawing__input"
+                  id="drawing-name"
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  autocomplete="name"
+                  required
+                />
+
+                <input
+                  class="drawing__input"
+                  id="drawing-email"
+                  type="email"
+                  name="email"
+                  placeholder="E-mail"
+                  autocomplete="email"
+                  required
+                />
+
+                <label class="drawing__label_file" for="file">
+                  <input
+                    class="drawing__input_file visually-hidden"
+                    type="file"
+                    name="file"
+                    id="file"
+                    accept=".png,.jpg,.jpeg,.pdf"
+                    required
+                  />
+
+                  <span class="drawing__span"> Attach a screenshot </span>
+                </label>
+
+                <button class="drawing__button" type="submit">Send</button>
+
+                <label class="drawing__label_checkbox" for="checkbox">
+                  <input
+                    class="drawing__input_checkbox"
+                    type="checkbox"
+                    name="checkbox"
+                    id="checkbox"
+                    required
+                  />
+
+                  <span class="drawing__agreement">
+                    I agree to the processing of personal data
+                  </span>
+                </label>
+
+                <p class="drawing__agreement">
+                  Demo only. No information or files are sent or stored.
+                </p>
+
+                <p
+                  class="drawing__agreement"
+                  id="drawing-form-status"
+                  role="status"
+                  aria-live="polite"
+                ></p>
+              </form>
             </div>
           </div>
         </div>
       </section>
-      <section class="monitor">
+
+      <section class="monitor" id="monitor" aria-labelledby="monitor-title">
         <div class="monitor__header_background" aria-hidden="true"></div>
+
         <div class="container">
           <div class="monitor__tablet_container">
             <div>
@@ -319,22 +472,24 @@
                 loading="lazy"
                 decoding="async"
               />
+
               <ul class="monitor__list" aria-label="HP and Cyberpunk 2077">
                 <li>
                   <svg class="monitor__icon_hp" role="img" aria-label="HP">
                     <use href="./images/sprite.svg#icon-hp"></use>
                   </svg>
                 </li>
+
                 <li>
                   <img
                     class="monitor__icon_cross"
                     src="./images/cross.svg"
                     alt=""
-                    aria-hidden="true"
                     width="90"
                     height="19"
                   />
                 </li>
+
                 <li>
                   <svg
                     class="monitor__icon_cyperpunk"
@@ -346,14 +501,19 @@
                 </li>
               </ul>
             </div>
+
             <div>
-              <h2 class="monitor__title">Full immersion with HP</h2>
+              <h2 class="monitor__title" id="monitor-title">
+                Full immersion with HP
+              </h2>
+
               <p class="monitor__description">
                 Dive into modern action games with stunning visuals on a
                 23.8-inch monitor designed to deliver ultra-rich colors. Stay
                 ahead of every moment with a 1 ms response time and 144 Hz
                 refresh rate!
               </p>
+
               <ul class="monitor__advantages_list">
                 <li class="monitor__advantages_item">
                   <svg
@@ -363,8 +523,10 @@
                   >
                     <use href="./images/sprite.svg#icon-icon_contents_4"></use>
                   </svg>
+
                   <p>Vibrant, rich colors</p>
                 </li>
+
                 <li class="monitor__advantages_item">
                   <svg
                     class="monitor__advantages_icon"
@@ -373,8 +535,10 @@
                   >
                     <use href="./images/sprite.svg#icon-icon_contents_5"></use>
                   </svg>
+
                   <p>Crystal-clear visuals</p>
                 </li>
+
                 <li class="monitor__advantages_item">
                   <svg
                     class="monitor__advantages_icon"
@@ -383,78 +547,100 @@
                   >
                     <use href="./images/sprite.svg#icon-icon_contents_6"></use>
                   </svg>
+
                   <p>Fast motion and smooth gameplay</p>
                 </li>
               </ul>
-              <button class="monitor__button" type="button">Learn more</button>
+
+              <a
+                class="monitor__button"
+                href="https://www.hp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Learn more
+              </a>
             </div>
           </div>
         </div>
       </section>
-      <section class="kit">
+
+      <section class="kit" id="kit" aria-labelledby="kit-title">
         <div class="kit__tablet_container">
-          <div class="kit__header_background"></div>
+          <div class="kit__header_background" aria-hidden="true"></div>
+
           <div class="container">
-            <h2 class="kit__title">Buy the game Cyberpunk 2077</h2>
+            <h2 class="kit__title" id="kit-title">
+              Buy the game Cyberpunk 2077
+            </h2>
+
             <p class="kit__description">The set includes:</p>
+
             <ul class="kit__list">
               <li class="kit__item">
-                <svg class="kit__icon">
+                <svg class="kit__icon" aria-hidden="true" focusable="false">
                   <use href="./images/sprite.svg#icon-icon_contents_1"></use>
                 </svg>
+
                 <p class="kit__item_description">A case with game discs</p>
               </li>
+
               <li class="kit__item">
-                <svg class="kit__icon">
+                <svg class="kit__icon" aria-hidden="true" focusable="false">
                   <use href="./images/sprite.svg#icon-icon_contents_2"></use>
                 </svg>
+
                 <p class="kit__item_description">
                   A case with a game download code and discs (PC)
                 </p>
               </li>
+
               <li class="kit__item">
-                <svg class="kit__icon">
+                <svg class="kit__icon" aria-hidden="true" focusable="false">
                   <use href="./images/sprite.svg#icon-icon_contents_3"></use>
                 </svg>
+
                 <p class="kit__item_description">
                   A guidebook with information about the game world
                 </p>
               </li>
             </ul>
+
             <p class="kit__description kit__description--margin">
               Choose a platform:
             </p>
-            <ul class="kit__list_platform kit__list_platform--margin">
+
+            <ul
+              class="kit__list_platform kit__list_platform--margin"
+              aria-label="PC and Xbox"
+            >
               <li class="kit__item_platform">
-                <svg class="kit__icon_pc">
-                  <use
-                    href="/portfolio-cyberpunk-html-scss-js-2025/images/sprite.svg#icon-pc"
-                  ></use>
+                <svg class="kit__icon_pc" role="img" aria-label="PC">
+                  <use href="./images/sprite.svg#icon-pc"></use>
                 </svg>
               </li>
+
               <li class="kit__item_platform">
-                <svg class="kit__icon_xbox">
-                  <use
-                    href="/portfolio-cyberpunk-html-scss-js-2025/images/sprite.svg#icon-xbox_one_logo"
-                  ></use>
+                <svg class="kit__icon_xbox" role="img" aria-label="Xbox One">
+                  <use href="./images/sprite.svg#icon-xbox_one_logo"></use>
                 </svg>
               </li>
             </ul>
-            <ul class="kit__list_platform">
+
+            <ul class="kit__list_platform" aria-label="Stadia and PlayStation">
               <li class="kit__item_platform">
-                <svg class="kit__icon_stadia">
-                  <use
-                    href="/portfolio-cyberpunk-html-scss-js-2025/images/sprite.svg#icon-stadia_logo"
-                  ></use>
+                <svg class="kit__icon_stadia" role="img" aria-label="Stadia">
+                  <use href="./images/sprite.svg#icon-stadia_logo"></use>
                 </svg>
               </li>
+
               <li class="kit__item_platform">
-                <svg class="kit__icon_ps4" width="168" height="35">
-                  <use
-                    href="/portfolio-cyberpunk-html-scss-js-2025/images/sprite.svg#icon-ps4_logo"
-                    width="168"
-                    height="35"
-                  ></use>
+                <svg
+                  class="kit__icon_ps4"
+                  role="img"
+                  aria-label="PlayStation 4"
+                >
+                  <use href="./images/sprite.svg#icon-ps4_logo"></use>
                 </svg>
               </li>
             </ul>
@@ -462,33 +648,64 @@
         </div>
       </section>
     </main>
+
     <footer class="footer">
       <div class="footer_tablet_container">
         <ul class="footer__list_logo">
           <li>
-            <svg class="footer__item_logo_cyberpunk">
+            <svg
+              class="footer__item_logo_cyberpunk"
+              role="img"
+              aria-label="Cyberpunk 2077"
+            >
               <use href="./images/sprite.svg#icon-logo_cyberpunk"></use>
             </svg>
           </li>
+
           <li>
-            <svg class="footer__item_logo_cd_project_red">
+            <svg
+              class="footer__item_logo_cd_project_red"
+              role="img"
+              aria-label="CD PROJEKT RED"
+            >
               <use href="./images/sprite.svg#icon-cd_project_red_logo"></use>
             </svg>
           </li>
         </ul>
+
         <ul class="footer__list_conditions">
           <li>
-            <a class="footer__link" href="#">License</a>
+            <a
+              class="footer__link"
+              href="https://regulations.cdprojektred.com/en/user_agreement"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="CD PROJEKT RED User Agreement"
+            >
+              License
+            </a>
           </li>
+
           <li>
-            <a class="footer__link" href="#">Privacy Policy</a>
+            <a
+              class="footer__link"
+              href="https://regulations.cdprojektred.com/en/privacy_policy"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="CD PROJEKT RED Privacy Policy"
+            >
+              Privacy Policy
+            </a>
           </li>
         </ul>
       </div>
+
       <p class="footer__description">
         CD PROJEKT®, Cyberpunk®, Cyberpunk 2077®
       </p>
     </footer>
-    <script src="./js/slider.js"></script>
+
+    <script src="./js/slider.js" defer></script>
+    <script src="./js/form.js" defer></script>
   </body>
 </html>
