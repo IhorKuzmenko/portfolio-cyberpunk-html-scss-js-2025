@@ -1,176 +1,200 @@
 .kit {
-    background-color: $black-color;
-    padding-bottom: 70px;
+  padding-bottom: 70px;
+  background-color: $black-color;
 
-    @media (min-width: 1024px) {
-        padding-bottom: 0px;
-    }
+  @media (min-width: 1024px) {
+    padding-bottom: 0;
+  }
 }
+
+// Main layout
+
+.kit__tablet_container {
+  width: 100%;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    align-items: stretch;
+  }
+
+  > .container {
+    @media (min-width: 1024px) {
+      flex: 1 1 0;
+      min-width: 0;
+      width: auto;
+      max-width: none;
+      margin: 0;
+      padding: 70px 36px 70px 32px;
+    }
+  }
+}
+
+// Background image
 
 .kit__header_background {
-    margin: 0 auto;
-    min-width: 320px;
-    height: 198px;
-    background-image: url("../images/discs_mobile.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  width: 100%;
+  height: 198px;
 
-    @media (min-width: 1024px) {
-        min-width: 332px;
-        height: 717px;
-        background-image: url("../images/discs_tablet.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+  background-image: url("../images/discs_mobile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-    @media (min-width: 1920px) {
-        min-width: 944px;
-        height: 680px;
-        background-image: url("../images/discs_desktop.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+  @media (min-width: 1024px) {
+    flex: 0 0 332px;
+    width: 332px;
+    height: auto;
+    min-height: 717px;
+
+    background-image: url("../images/discs_tablet.jpg");
+  }
+
+  @media (min-width: 1920px) {
+    flex-basis: 944px;
+    width: 944px;
+    min-height: 680px;
+
+    background-image: url("../images/discs_desktop.jpg");
+  }
 }
+
+// Heading
 
 .kit__title {
-    margin-top: 40px;
-    font-weight: bold;
-    font-size: 30px;
-    color: $white-color;
+  margin-top: 40px;
 
-    @media (min-width: 1024px) {
-        margin-top: 0px;
-        font-size: 62px;
-    }
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $white-color;
+
+  @media (min-width: 1024px) {
+    margin-top: 0;
+    font-size: 62px;
+    line-height: 1.15;
+  }
 }
+
+// Section descriptions
 
 .kit__description {
-    margin-top: 25px;
-    font-weight: bold;
-    font-size: 20px;
-    color: $turquoise-color;
+  margin-top: 25px;
 
-    @media (min-width: 1024px) {
-        font-size: 24px;
-    }
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: $turquoise-color;
 
-    &--margin {
-        margin-top: 40px;
-        margin-bottom: 25px;
-    }
+  @media (min-width: 1024px) {
+    font-size: 24px;
+  }
+
+  &--margin {
+    margin-top: 40px;
+    margin-bottom: 25px;
+  }
 }
 
+// Game contents list
+
 .kit__list {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 
-    @media (min-width: 1024px) {
-        margin-top: 15px;
-    }
+  margin-top: 20px;
 
-    li:not(:last-child) {
-        margin-bottom: 15px;
-    }
-
+  @media (min-width: 1024px) {
+    margin-top: 15px;
+  }
 }
 
 .kit__item {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  @media (min-width: 1024px) {
+    gap: 10px;
+  }
 }
 
 .kit__icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 18px;
+  display: block;
+  flex-shrink: 0;
 
-    @media (min-width: 1024px) {
-        width: 32px;
-        height: 32px;
-        margin-right: 10px;
-    }
+  width: 24px;
+  height: 24px;
+
+  @media (min-width: 1024px) {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .kit__item_description {
-    width: 254px;
-    font-size: 16px;
-    color: $white-color;
+  flex: 1;
+  min-width: 0;
 
-    @media (min-width: 1024px) {
-        font-size: 18px;
-    }
+  font-size: 16px;
+  line-height: 1.5;
+  color: $white-color;
+
+  overflow-wrap: break-word;
+
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
 }
 
-.kit__icon_pc {
-    width: 57px;
-    height: 33px;
+// Platform lists
 
-    use {
-        width: 57px;
-        height: 33px;
-    }
+.kit__list_platform {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  width: 100%;
+
+  @media (min-width: 1024px) {
+    justify-content: flex-start;
+    gap: 80px;
+  }
+
+  &--margin {
+    margin-bottom: 40px;
+  }
+}
+
+.kit__item_platform {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+// Platform logos
+
+.kit__icon_pc {
+  display: block;
+  width: 57px;
+  height: 33px;
 }
 
 .kit__icon_xbox {
-    width: 178px;
-    height: 35px;
-
-    use {
-        width: 178px;
-        height: 35px;
-    }
+  display: block;
+  width: 178px;
+  height: 35px;
 }
 
 .kit__icon_stadia {
-    width: 58px;
-    height: 50px;
-
-    use {
-        width: 58px;
-        height: 50px;
-    }
+  display: block;
+  width: 58px;
+  height: 50px;
 }
 
 .kit__icon_ps4 {
-    width: 168px;
-    height: 35px;
-
-    use {
-        width: 168px;
-        height: 35px;
-    }
-}
-
-.kit__list_platform {
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-
-    li:first-child {
-        @media (min-width: 1024px) {
-            margin-right: 80px;
-        }
-    }
-
-    @media (min-width: 1024px) {
-        justify-content: start;
-    }
-
-    &--margin {
-        margin-bottom: 40px;
-    }
-}
-
-@media (min-width:1024px) {
-    .kit__tablet_container {
-        display: flex;
-
-        div:last-child {
-            padding: 70px 36px 70px 32px;
-        }
-    }
+  display: block;
+  width: 168px;
+  height: 35px;
 }
