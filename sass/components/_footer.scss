@@ -1,128 +1,142 @@
-.footer__list_logo {
+.footer {
+  width: 100%;
+  background-color: $white-color;
+}
+
+// Main footer container
+
+.footer_tablet_container {
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: 1024px) {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding-top: 40px;
-    padding-bottom: 25px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
 
-    @media (min-width: 1024px) {
-        flex-direction: row;
-        padding: 0px;
-    }
+    max-width: 1024px;
+    padding: 13px 36px;
+  }
 
-    li:not(:last-child) {
-        margin-bottom: 25px;
+  @media (min-width: 1920px) {
+    max-width: 1920px;
+    padding: 13px 320px;
+  }
+}
 
-        @media (min-width: 1024px) {
-            margin-bottom: 0px;
-        }
-    }
+// Brand logos
 
-    li:first-child{
-        @media (min-width: 1024px){
-            margin-right: 32px;
-        }
-    }
+.footer__list_logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+
+  padding: 40px 12px 25px;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    gap: 32px;
+    padding: 0;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .footer__item_logo_cyberpunk {
-    width: 200px;
-    height: 50px;
+  display: block;
+  width: 200px;
+  height: 50px;
 
-    use {
-        width: 200px;
-        height: 50px;
-    }
-
-    @media (min-width: 1024px) {
-        width: 296px;
-        height: 74px;
-
-        use {
-            width: 296px;
-            height: 74px;
-        }
-    }
+  @media (min-width: 1024px) {
+    width: 296px;
+    height: 74px;
+  }
 }
 
 .footer__item_logo_cd_project_red {
-    width: 116px;
-    height: 50px;
+  display: block;
+  width: 116px;
+  height: 50px;
 
-    use {
-        width: 116px;
-        height: 50px;
-    }
-
-    @media (min-width: 1024px) {
-        width: 172px;
-        height: 74px;
-
-        use {
-            width: 172px;
-            height: 74px;
-        }
-    }
+  @media (min-width: 1024px) {
+    width: 172px;
+    height: 74px;
+  }
 }
 
+// Legal links
+
 .footer__list_conditions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    background-color: $gray--color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 
-    @media (min-width: 1024px) {
-        flex-direction: row;
-        padding: 0px;
-        background-color: $white-color;
-    }
+  width: 100%;
+  padding: 25px 12px;
 
-    li:not(:last-child) {
-        margin-bottom: 15px;
+  background-color: $gray--color;
 
-        @media (min-width: 1024px) {
-            margin-bottom: 0px;
-        }
-    }
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    gap: 100px;
 
-    li:first-child{
-        @media (min-width: 1024px){
-            margin-right: 100px;
-        }
-    }
+    width: auto;
+    padding: 0;
+
+    background-color: transparent;
+  }
 }
 
 .footer__link {
-    font-size: 16px;
-    color: inherit;
+  display: inline-block;
 
-    @media (min-width:1024px) {
-        font-size: 18px;
-    }
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $black-color;
+
+  text-decoration: none;
+  text-underline-offset: 4px;
+
+  transition: color 200ms ease;
+
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
+
+  &:hover {
+    color: $light-gray-color;
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $turquoise-color;
+    outline-offset: 4px;
+    text-decoration: underline;
+  }
 }
+
+// Copyright
 
 .footer__description {
-    padding-top: 13px;
-    padding-bottom: 13px;
-    text-align: center;
-    font-size: 12px;
-    background-color: $black-color;
-    color: $white-color;
-}
+  width: 100%;
+  padding: 13px 12px;
 
-@media (min-width: 1024px) {
-    .footer_tablet_container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 13px 36px;
-    }
-}
+  background-color: $black-color;
+  color: $white-color;
 
-@media (min-width: 1920px) {
-    .footer_tablet_container {
-        padding: 13px 320px;
-    }
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
 }
