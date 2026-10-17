@@ -1,3 +1,5 @@
+@use "../utils/variables" as *;
+
 .monitor {
   padding-bottom: 70px;
   background-color: $yellow-color;

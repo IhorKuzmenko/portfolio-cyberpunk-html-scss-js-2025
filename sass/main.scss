@@ -1,9 +1,6 @@
-@import 'utils/variables';
-
-@import 'components/header';
-@import 'components/about';
-@import 'components/drawing';
-@import 'components/monitor';
-@import 'components/kit';
-@import 'components/footer';
-
+@use "components/header";
+@use "components/about";
+@use "components/drawing";
+@use "components/monitor";
+@use "components/kit";
+@use "components/footer";
