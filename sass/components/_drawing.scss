@@ -1,305 +1,381 @@
 .drawing {
-    margin-top: 70px;
-    padding-bottom: 70px;
-    background-color: $black-color;
+  margin-top: 70px;
+  padding-bottom: 70px;
+  background-color: $black-color;
 }
 
 .drawing__header_background {
-    margin: 0 auto;
-    width: 100%;
-    height: 70px;
-    background-image: url("../images/header_drawing_section.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
+  width: 100%;
+  height: 70px;
+  margin: 0 auto;
+
+  background-image: url("../images/header_drawing_section.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
+
+// Sale labels
 
 .drawing__label_sale {
-    width: 62px;
-    height: 62px;
+  display: block;
+  width: 62px;
+  height: 62px;
 
-    use {
-        width: 62px;
-        height: 62px;
-    }
-
-    @media (min-width: 1024px) {
-        width: 132px;
-        height: 132px;
-
-        use {
-            width: 132px;
-            height: 132px;
-        }
-    }
-
-    @media (min-width: 1920px) {
-        display: none;
-    }
-}
-
-.drawing__xbox_container {
-    position: relative;
-}
-
-.drawing__background_xbox {
+  @media (min-width: 1024px) {
     width: 132px;
-    height: 130px;
+    height: 132px;
+  }
 
-    @media (min-width: 1024px) {
-        width: 460px;
-        height: 456px;
-    }
-
-    @media (min-width: 1920px) {
-        margin-right: -140px;
-        z-index: 999;
-    }
+  @media (min-width: 1920px) {
+    display: none;
+  }
 }
 
-.drawing__background_ps {
-    width: 132px;
-    height: 130px;
-
-    @media (min-width: 1024px) {
-        width: 460px;
-        height: 456px;
-    }
+.drawing__label_sale_desktop {
+  width: 132px;
+  height: 132px;
+  flex-shrink: 0;
 }
 
-.drawing__xbox {
-    position: absolute;
-    top: 7px;
-    left: 47px;
-    width: 85px;
-    height: 100px;
+// Console images
 
-    @media (min-width: 1024px) {
-        top: 25px;
-        left: 155px;
-        width: 296px;
-        height: 351px;
+.drawing__tablet_container {
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+
+    > div:last-child {
+      flex: 1 1 0;
+      min-width: 0;
+      max-width: 460px;
     }
+  }
 
-    @media (min-width: 1920px) {
-        z-index: 999;
-    }
-}
-
-.drawing__ps_container {
-    position: relative;
-}
-
-.drawing_ps {
-    position: absolute;
-    top: 7px;
-    left: 47px;
-    width: 85px;
-    height: 100px;
-
-    @media (min-width: 1024px) {
-        top: 25px;
-        left: 155px;
-        width: 296px;
-        height: 351px;
-    }
+  @media (min-width: 1920px) {
+    gap: 40px;
+  }
 }
 
 .drawing__flex_container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    @media (min-width:1024px) {
-        flex-direction: column;
-        justify-content: start;
-    }
+  width: 100%;
+  max-width: 296px;
 
-    @media (min-width:1920px) {
-        flex-direction: row;
-    }
+  @media (min-width: 1024px) {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 460px;
+    max-width: 460px;
+  }
+
+  @media (min-width: 1920px) {
+    flex-direction: row;
+
+    width: 780px;
+    max-width: none;
+  }
 }
 
-.drawing__title {
-    margin-top: 25px;
-    font-size: 30px;
-    color: $white-color;
+.drawing__xbox_container,
+.drawing__ps_container {
+  position: relative;
+  flex: 0 0 auto;
 
-    @media (min-width:1024px) {
-        margin-top: 15px;
-        max-width: 460px;
-        font-size: 62px;
-    }
+  width: 132px;
+  height: 130px;
+
+  @media (min-width: 1024px) {
+    width: 460px;
+    height: 456px;
+  }
+}
+
+.drawing__xbox_container {
+  @media (min-width: 1920px) {
+    z-index: 1;
+    margin-right: -140px;
+  }
+}
+
+.drawing__background_xbox,
+.drawing__background_ps {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.drawing__xbox,
+.drawing_ps {
+  position: absolute;
+  top: 7px;
+  left: 47px;
+
+  display: block;
+  width: 85px;
+  height: 100px;
+
+  @media (min-width: 1024px) {
+    top: 25px;
+    left: 155px;
+
+    width: 296px;
+    height: 351px;
+  }
+}
+
+// Mobile and tablet descriptions
+
+.drawing__title {
+  margin-top: 25px;
+
+  font-size: 30px;
+  font-weight: 700;
+  color: $white-color;
+
+  @media (min-width: 1024px) {
+    max-width: 460px;
+    margin-top: 15px;
+    font-size: 62px;
+  }
 }
 
 .drawing__description {
-    margin-top: 25px;
-    font-size: 16px;
-    line-height: 2;
-    color: $white-color;
+  margin-top: 25px;
 
-    &--color {
-        font-weight: bold;
-        color: $turquoise-color;
-    }
+  font-size: 16px;
+  line-height: 2;
+  color: $white-color;
 
-    @media (min-width: 1024px) {
-        max-width: 460px;
-        min-height: 159px;
-        font-size: 18px;
-        line-height: 1.8;
-    }
+  @media (min-width: 1024px) {
+    max-width: 460px;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  &--color {
+    font-weight: 700;
+    color: $turquoise-color;
+  }
 }
 
+// Form
+
 .drawing__form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 70px;
+  display: flex;
+  flex-direction: column;
 
-    @media (min-width: 1024px) {
-        margin-top: 98px;
-    }
+  width: 100%;
+  max-width: 296px;
+  margin-top: 70px;
 
-     @media (min-width: 1920px) {
-        width: 460px;
-    }
+  @media (min-width: 1024px) {
+    max-width: 460px;
+    margin-top: 98px;
+  }
+
+  @media (min-width: 1920px) {
+    width: 460px;
+  }
 }
 
 .drawing__input {
-    padding-bottom: 13px;
-    max-width: 296px;
-    height: 33px;
-    border-color: transparent;
-    border-bottom: 1px solid $light-gray-color;
-    background-color: $black-color;
+  display: block;
+
+  width: 100%;
+  height: 33px;
+  padding: 0 0 13px;
+
+  border: 0;
+  border-bottom: 1px solid $light-gray-color;
+  border-radius: 0;
+
+  background-color: transparent;
+  color: $white-color;
+
+  font-family: inherit;
+  font-size: 16px;
+
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
+
+  & + .drawing__input {
+    margin-top: 37px;
+  }
+
+  &::placeholder {
     color: $white-color;
+    opacity: 1;
+  }
 
-    @media (min-width: 1024px) {
-        max-width: 460px;
-        font-size: 18px;
-    }
-
-    &:nth-child(2) {
-        margin-top: 37px;
-    }
-
-    &::placeholder {
-        color: $white-color;
-    }
+  &:focus-visible {
+    outline: 2px solid $turquoise-color;
+    outline-offset: 4px;
+    border-bottom-color: $turquoise-color;
+  }
 }
 
-.drawing__label_file {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 35px;
-    max-width: 296px;
-    height: 120px;
-    border: 1px dashed $light-gray-color;
+// File upload
 
-    @media (min-width: 1024px) {
-        max-width: 460px;
-        font-size: 18px;
-    }
+.drawing__label_file {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 120px;
+  margin-top: 35px;
+  padding: 16px;
+
+  border: 1px dashed $light-gray-color;
+
+  text-align: center;
+  cursor: pointer;
+
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
+
+  &:hover,
+  &:focus-within {
+    border-color: $turquoise-color;
+  }
 }
 
 .drawing__span {
-    font-weight: 300;
-    font-size: 16px;
-    text-decoration: underline;
-    color: $white-color;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+
+  text-decoration: underline;
+  color: $white-color;
+
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
 }
+
+// Submit button
 
 .drawing__button {
-    cursor: pointer;
-    margin-top: 35px;
-    width: 182px;
-    min-height: 60px;
+  width: 182px;
+  min-height: 60px;
+  margin-top: 35px;
+  padding: 12px 20px;
 
-    border-color: transparent;
-    background-color: $yellow-color;
-    color: $black-color;
+  border: 0;
 
-    font-weight: bold;
-    font-size: 16px;
+  background-color: $yellow-color;
+  color: $black-color;
 
-    @media (min-width: 1024px) {
-        font-size: 18px;
-    }
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
+
+  &:hover {
+    background-color: $white-color;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $turquoise-color;
+    outline-offset: 4px;
+  }
 }
 
+// Agreement checkbox
+
 .drawing__label_checkbox {
-    display: flex;
-    align-items: center;
-    margin-top: 14px;
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+
+  cursor: pointer;
 }
 
 .drawing__input_checkbox {
-    margin-right: 10px;
-    width: 14px;
-    height: 14px;
-    accent-color: $black-color;
+  flex-shrink: 0;
+
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+
+  accent-color: $yellow-color;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid $turquoise-color;
+    outline-offset: 3px;
+  }
 }
 
 .drawing__agreement {
-    font-weight: 300;
-    font-size: 12px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: $white-color;
+}
+
+// Desktop heading and description
+
+.drawing__desktop_container {
+  display: none;
+
+  @media (min-width: 1920px) {
+    display: block;
+  }
+}
+
+.drawing__title_container {
+  @media (min-width: 1920px) {
+    display: none;
+  }
+}
+
+.drawing__inner {
+  @media (min-width: 1920px) {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+}
+
+.drawing__desktop_title {
+  @media (min-width: 1920px) {
+    font-family: inherit;
+    font-size: 62px;
+    font-weight: 700;
     color: $white-color;
+  }
 }
 
-@media (min-width: 1024px) {
-    .drawing__tablet_container {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-    }
-}
+.drawing__desktop_description {
+  @media (min-width: 1920px) {
+    max-width: 952px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 
-@media (min-width: 1920px) {
-    .drawing__title_container {
-        display: none;
-    }
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 1.8;
+    color: $white-color;
+  }
 
-    .drawing__label_sale_desktop {
-        width: 132px;
-        height: 132px;
-        margin-right: 32px;
-
-        use {
-            width: 132px;
-            height: 132px;
-        }
-    }
-
-    .drawing__inner {
-        display: flex;
-        align-items: center;
-    }
-
-    .drawing__desktop_title {
-        font-family: inherit;
-        font-weight: bold;
-        font-size: 62px;
-        color: $white-color;
-    }
-
-    .drawing__desktop_description {
-        margin-top: 25px;
-        margin-bottom: 25px;
-        max-width: 952px;
-        font-family: inherit;
-        font-size: 18px;
-        line-height: 1.8;
-        color: $white-color;
-    }
-
-    .drawing__desktop_description--color {
-        font-weight: bold;
-        color: $turquoise-color;
-    }
-}
-
-@media (max-width: 1919px) {
-    .drawing__desktop_container {
-        display: none;
-    }
+  &--color {
+    font-weight: 700;
+    color: $turquoise-color;
+  }
 }
