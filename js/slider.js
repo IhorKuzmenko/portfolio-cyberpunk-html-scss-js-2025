@@ -1,56 +1,77 @@
 const backgrounds = {
-    desktop: ['url("/portfolio-cyberpunk-html-scss-js-2025/images/image_slide_1_desktop.jpg")',
-        'url("/portfolio-cyberpunk-html-scss-js-2025/images/image_slide_2_desktop.jpg")',
-        'url("/portfolio-cyberpunk-html-scss-js-2025/images/image_slide_3_desktop.jpg")'],
-    tablet: ['url("/portfolio-cyberpunk-html-scss-js-2025/images/image_slide_1_tablet.jpg")',
-        'url("/portfolio-cyberpunk-html-scss-js-2025/images/image_slide_2_tablet.jpg")',
-        'url("/portfolio-cyberpunk-html-scss-js-2025/images/image_slide_3_tablet.jpg")'],
-    mobile: ['url("/portfolio-cyberpunk-html-scss-js-2025/images/image_slide_1_mobile.jpg")',
-        'url("/portfolio-cyberpunk-html-scss-js-2025/images/image_slide_2_mobile.jpg")',
-        'url("/portfolio-cyberpunk-html-scss-js-2025/images/image_slide_3_mobile.jpg")'],
+  mobile: [
+    "image_slide_1_mobile.jpg",
+    "image_slide_2_mobile.jpg",
+    "image_slide_3_mobile.jpg",
+  ],
+  tablet: [
+    "image_slide_1_tablet.jpg",
+    "image_slide_2_tablet.jpg",
+    "image_slide_3_tablet.jpg",
+  ],
+  desktop: [
+    "image_slide_1_desktop.jpg",
+    "image_slide_2_desktop.jpg",
+    "image_slide_3_desktop.jpg",
+  ],
 };
 
+const header = document.querySelector(".header");
+
+const SLIDE_INTERVAL = 5000;
+
+const imagesBaseUrl = new URL("../images/", document.currentScript.src);
+
 function getDeviceType() {
-    const w = window.innerWidth;
-    if (w <= 320) return 'mobile';
-    if (w <= 1024) return 'tablet';
-    return 'desktop';
+  const width = window.innerWidth;
+
+  if (width < 1024) {
+    return "mobile";
+  }
+
+  if (width < 1920) {
+    return "tablet";
+  }
+
+  return "desktop";
 }
 
-const header = document.querySelector('.header');
-let deviceType = getDeviceType();
-let currentIndex = 0;
-let currentImages = backgrounds[deviceType];
+if (header) {
+  let deviceType = getDeviceType();
+  let currentIndex = 0;
 
-function showSlide(index) {
-    header.style.backgroundImage = currentImages[index];
-}
+  function showSlide() {
+    const currentImages = backgrounds[deviceType];
+    const imageName = currentImages[currentIndex];
+    const imageUrl = new URL(imageName, imagesBaseUrl);
 
-function startSlider() {
-    showSlide(currentIndex);
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % currentImages.length;
-        showSlide(currentIndex);
-    }, 5000);
-}
+    header.style.backgroundImage = `url("${imageUrl.href}")`;
+  }
 
-window.addEventListener('resize', () => {
-    let newDeviceType = getDeviceType();
-    if (newDeviceType !== deviceType) {
-        deviceType = newDeviceType;
-        currentImages = backgrounds[deviceType];
-        currentIndex = 0;
-        showSlide(currentIndex);
+  function nextSlide() {
+    const currentImages = backgrounds[deviceType];
+
+    currentIndex = (currentIndex + 1) % currentImages.length;
+
+    showSlide();
+  }
+
+  function handleResize() {
+    const newDeviceType = getDeviceType();
+
+    if (newDeviceType === deviceType) {
+      return;
     }
-});
 
-startSlider();
+    deviceType = newDeviceType;
+    currentIndex = 0;
 
-// function changeBackgroundImage() {
-//     header.style.backgroundImage = backgrounds[index];
-//     index = (index + 1) % backgrounds.length;
-// }
+    showSlide();
+  }
 
-// changeBackgroundImage();
+  showSlide();
 
-// setInterval(changeBackgroundImage, 5000);
+  window.setInterval(nextSlide, SLIDE_INTERVAL);
+
+  window.addEventListener("resize", handleResize);
+}
